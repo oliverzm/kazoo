@@ -9297,6 +9297,9 @@
                 "Local-SDP": {
                     "type": "string"
                 },
+                "Media-Recordings": {
+                    "type": "string"
+                },
                 "Media-Server": {
                     "type": "string"
                 },
@@ -9328,6 +9331,9 @@
                     "type": "string"
                 },
                 "Raw-Application-Name": {
+                    "type": "string"
+                },
+                "Recording": {
                     "type": "string"
                 },
                 "Remote-SDP": {
@@ -11626,6 +11632,9 @@
                     },
                     "type": "array"
                 },
+                "Bridge-Actions": {
+                    "type": "string"
+                },
                 "Call-ID": {
                     "type": "string"
                 },
@@ -11748,6 +11757,9 @@
                     ],
                     "type": "string"
                 },
+                "Monitor-Early-Media": {
+                    "type": "string"
+                },
                 "Outbound-Callee-ID-Name": {
                     "type": "string"
                 },
@@ -11758,6 +11770,9 @@
                     "type": "string"
                 },
                 "Outbound-Caller-ID-Number": {
+                    "type": "string"
+                },
+                "Presence-ID": {
                     "type": "string"
                 },
                 "Ringback": {
@@ -11863,6 +11878,9 @@
         "kapi.dialplan.bridge_endpoint_headers": {
             "description": "AMQP API for dialplan.bridge_endpoint_headers",
             "properties": {
+                "Account-ID": {
+                    "type": "string"
+                },
                 "Auth-Password": {
                     "type": "string"
                 },
@@ -11915,6 +11933,9 @@
                     "type": "string"
                 },
                 "Endpoint-Delay": {
+                    "type": "string"
+                },
+                "Endpoint-ID": {
                     "type": "string"
                 },
                 "Endpoint-Options": {
@@ -12382,6 +12403,47 @@
             },
             "required": [
                 "Error-Message"
+            ],
+            "type": "object"
+        },
+        "kapi.dialplan.event_actions": {
+            "description": "AMQP API for dialplan.event_actions",
+            "properties": {
+                "Application-Name": {
+                    "enum": [
+                        "event_actions"
+                    ],
+                    "type": "string"
+                },
+                "Call-ID": {
+                    "type": "string"
+                },
+                "Event-Actions": {
+                    "type": "object"
+                },
+                "Event-Category": {
+                    "enum": [
+                        "call"
+                    ],
+                    "type": "string"
+                },
+                "Event-Name": {
+                    "enum": [
+                        "command"
+                    ],
+                    "type": "string"
+                },
+                "Insert-At": {
+                    "enum": [
+                        "now"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Application-Name",
+                "Call-ID",
+                "Event-Actions"
             ],
             "type": "object"
         },
@@ -19664,6 +19726,9 @@
                 "Origination-Call-ID": {
                     "type": "string"
                 },
+                "Outbound-Actions": {
+                    "type": "object"
+                },
                 "Outbound-Call-ID": {
                     "type": "string"
                 },
@@ -21149,6 +21214,9 @@
                 "B-Leg-Events": {
                     "type": "string"
                 },
+                "Bridge-Actions": {
+                    "type": "string"
+                },
                 "Call-Restrictions-Enabled": {
                     "type": "string"
                 },
@@ -21280,6 +21348,9 @@
                 "Media": {
                     "type": "string"
                 },
+                "Monitor-Early-Media": {
+                    "type": "string"
+                },
                 "Originate-Immediate": {
                     "type": "string"
                 },
@@ -21299,6 +21370,9 @@
                     "type": "string"
                 },
                 "Outbound-Caller-ID-Number": {
+                    "type": "string"
+                },
+                "Presence-ID": {
                     "type": "string"
                 },
                 "Ringback": {
@@ -21380,6 +21454,9 @@
                     "type": "string"
                 },
                 "B-Leg-Events": {
+                    "type": "string"
+                },
+                "Bridge-Actions": {
                     "type": "string"
                 },
                 "Call-Restrictions-Enabled": {
@@ -21526,6 +21603,9 @@
                     ],
                     "type": "string"
                 },
+                "Monitor-Early-Media": {
+                    "type": "string"
+                },
                 "Originate-Immediate": {
                     "type": "string"
                 },
@@ -21545,6 +21625,9 @@
                     "type": "string"
                 },
                 "Outbound-Caller-ID-Number": {
+                    "type": "string"
+                },
+                "Presence-ID": {
                     "type": "string"
                 },
                 "Ringback": {
@@ -21612,6 +21695,9 @@
         "kapi.resource.originate_req_endpoint_headers": {
             "description": "AMQP API for resource.originate_req_endpoint_headers",
             "properties": {
+                "Account-ID": {
+                    "type": "string"
+                },
                 "Auth-Password": {
                     "type": "string"
                 },
@@ -21664,6 +21750,9 @@
                     "type": "string"
                 },
                 "Endpoint-Delay": {
+                    "type": "string"
+                },
+                "Endpoint-ID": {
                     "type": "string"
                 },
                 "Endpoint-Options": {
@@ -21918,6 +22007,9 @@
                 "Local-SDP": {
                     "type": "string"
                 },
+                "Media-Recordings": {
+                    "type": "string"
+                },
                 "Media-Server": {
                     "type": "string"
                 },
@@ -21949,6 +22041,9 @@
                     "type": "string"
                 },
                 "Raw-Application-Name": {
+                    "type": "string"
+                },
+                "Recording": {
                     "type": "string"
                 },
                 "Remote-SDP": {
@@ -22167,6 +22262,9 @@
                 "Local-SDP": {
                     "type": "string"
                 },
+                "Media-Recordings": {
+                    "type": "string"
+                },
                 "Media-Server": {
                     "type": "string"
                 },
@@ -22198,6 +22296,9 @@
                     "type": "string"
                 },
                 "Raw-Application-Name": {
+                    "type": "string"
+                },
+                "Recording": {
                     "type": "string"
                 },
                 "Remote-SDP": {
@@ -22931,6 +23032,9 @@
                 "Body": {
                     "type": "string"
                 },
+                "Bridge-Actions": {
+                    "type": "string"
+                },
                 "Call-ID": {
                     "type": "string"
                 },
@@ -23050,6 +23154,9 @@
                 "Message-ID": {
                     "type": "string"
                 },
+                "Monitor-Early-Media": {
+                    "type": "string"
+                },
                 "Outbound-Callee-ID-Name": {
                     "type": "string"
                 },
@@ -23060,6 +23167,9 @@
                     "type": "string"
                 },
                 "Outbound-Caller-ID-Number": {
+                    "type": "string"
+                },
+                "Presence-ID": {
                     "type": "string"
                 },
                 "Ringback": {
@@ -23144,6 +23254,9 @@
         "kapi.sms.message_endpoint_headers": {
             "description": "AMQP API for sms.message_endpoint_headers",
             "properties": {
+                "Account-ID": {
+                    "type": "string"
+                },
                 "Auth-Password": {
                     "type": "string"
                 },
@@ -23196,6 +23309,9 @@
                     "type": "string"
                 },
                 "Endpoint-Delay": {
+                    "type": "string"
+                },
+                "Endpoint-ID": {
                     "type": "string"
                 },
                 "Endpoint-Options": {
